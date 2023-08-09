@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #game {
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        #ball {
+            position: absolute;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            background-color: #fff;
+            transform: translate(-50%, -50%);
+            outline: 1px solid #fff;
+        }
+
+        .paddle {
+            position: absolute;
+            background-color: #fff;
+        }
+
+        .score {
+            position: absolute;
+            margin: 8px;
+            top: 0;
+            font-size: 64px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+
+        .score:nth-of-type(1) {
+            left: 0px;
+        }
+        .score:nth-of-type(2) {
+            right: 0px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="game"></div>
+    <div class="score">0</div>
+    <div class="score">0</div>
+</body>
+</html>
